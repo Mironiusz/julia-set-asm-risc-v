@@ -1,50 +1,50 @@
 
 # Julia Set Generator
 
-### Autor: Rafał Mironko
+### Author: Rafał Mironko
 
 ---
 
-## Opis projektu
+## Project Description
 
-**Julia Set Generator** to program napisany w assemblerze RISC-V, który generuje bitmapę zbioru Julii na podstawie otrzymanych danych początkowych. Program prosi użytkownika o wprowadzenie części rzeczywistej i urojonej stałej, a następnie generuje obraz fraktala Julii w formacie .bmp.
+**Julia Set Generator** is a program written in RISC-V assembly that generates a bitmap of the Julia set based on given initial data. The program prompts the user to input the real and imaginary parts of a constant, and then generates an image of the Julia fractal in .bmp format.
 
-## Algorytm Julii
+## Julia Algorithm
 
-Zbiór Julii jest generowany na podstawie iteracji funkcji zespolonej. Dla każdego punktu \((x, y)\) w płaszczyźnie zespolonej, iteracja przebiega według wzoru:
+The Julia set is generated based on the iteration of a complex function. For each point \((x, y)\) in the complex plane, the iteration follows the formula:
 
 \[
 z_{n+1} = z_n^2 + c
 \]
 
-gdzie \(z\) jest liczbą zespoloną, a \(c\) jest stałą zespoloną określoną przez użytkownika. Początkowo \(z_0\) jest równe współrzędnym punktu \((x, y)\). Jeśli ciąg \(|z_n|\) nie przekroczy pewnej granicy (np. 2) po określonej liczbie iteracji, punkt \((x, y)\) jest częścią zbioru Julii.
+where \(z\) is a complex number, and \(c\) is a complex constant specified by the user. Initially, \(z_0\) is equal to the coordinates of the point \((x, y)\). If the sequence \(|z_n|\) does not exceed a certain limit (e.g., 2) after a specified number of iterations, the point \((x, y)\) is part of the Julia set.
 
-## Funkcje
+## Features
 
-- **Generowanie Zbioru Julii**: Program oblicza i generuje fraktal Julii.
-- **Interaktywne Dane Wejściowe**: Użytkownik wprowadza część rzeczywistą i urojoną stałej zespolonej.
-- **Wysoka Wydajność**: Wykorzystanie assemblera RISC-V pozwala na maksymalizację wydajności podczas generowania fraktala.
+- **Julia Set Generation**: The program computes and generates the Julia fractal.
+- **Interactive Input**: The user inputs the real and imaginary parts of the complex constant.
+- **High Performance**: Using RISC-V assembly maximizes performance during fractal generation.
 
-## Wymagania
+## Requirements
 
-- **RARS (RISC-V Assembler and Runtime Simulator)**: Do kompilacji i uruchomienia programu.
-- **Program do przeglądania obrazów .bmp**: Do otwarcia wygenerowanego pliku output.bmp.
+- **RARS (RISC-V Assembler and Runtime Simulator)**: For compiling and running the program.
+- **.bmp Image Viewer**: To open the generated `output.bmp` file.
 
-## Instalacja
+## Installation
 
-1. **Pobierz i zainstaluj RARS**: [Pobierz RARS](https://github.com/TheThirdOne/rars/releases).
-2. **Sklonuj repozytorium**:
+1. **Download and install RARS**: [Download RARS](https://github.com/TheThirdOne/rars/releases).
+2. **Clone the repository**:
    ```sh
-   git clone https://github.com/twoje_repozytorium/julia-set-generator.git
+   git clone https://github.com/your_repository/julia-set-generator.git
    cd julia-set-generator
    ```
 
-## Użycie
+## Usage
 
-1. Otwórz plik assemblera w RARS.
-2. Uruchom program, aby wygenerować plik `output.bmp`.
-3. Otwórz `output.bmp` za pomocą dowolnego programu do przeglądania obrazów.
+1. Open the assembly file in RARS.
+2. Run the program to generate the `output.bmp` file.
+3. Open `output.bmp` with any image viewer.
 
-## Autor
+## Author
 
 Rafał Mironko
